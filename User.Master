@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="tblemployee.User" %>
+<%@ Register Src="~/header.ascx" TagName="myhead" TagPrefix="ss"%>
+<%@ Register Src="~/footer.ascx" TagName="myfoot" TagPrefix="ss" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <script src="jquery.js"></script>
+    <link href="menu.css" rel="stylesheet" />
+    <script src="menu.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <ss:myhead ID="h1" runat="server" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color:brown">
+                        <div id="menu">
+		<ul class="menu">
+			<li><a href="HomeFrom.aspx"><span>Homepage</span></a></li>
+			<li><a href="LogoutFrom.aspx"><span>Logout</span></a></li>
+            <li><a href="Changepassword.aspx"><span>ChangePassword</span></a></li>
+		</ul>
+	</div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color:azure;color:orangered; vertical-align:top;height:400px">
+                        <center>
+                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                         </asp:ContentPlaceHolder>
+                         </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <ss:myfoot ID="f1" runat="server" />
+                    </td>
+                </tr>
+            </table>
+           
+        </div>
+    </form>
+</body>
+</html>
